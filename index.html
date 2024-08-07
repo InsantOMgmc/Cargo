@@ -1,1 +1,738 @@
-<!DOCTYPE html><html lang="ru"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Отгрузки</title>    <link rel="stylesheet" href="css/style.min.css">    <link rel="stylesheet" href="css/fonts.css"></head><body>    <header class="header">    <div class="container">        <div class="header__inner">            <button class="user-profile">                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">                    <path                        d="M3.87288 3.80952C3.87288 1.60038 5.51508 0 7.62481 0C9.73454 0 12.1271 1.60038 12.1271 3.80952C12.1271 6.01866 9.73454 8.38095 7.62481 8.38095C6.61168 8.38095 6.09004 7.60729 5.37365 6.85714C4.65726 6.107 3.87288 4.87039 3.87288 3.80952ZM15.879 14.4762L14.3783 11.4286C13.8924 10.4094 12.4646 9.90252 11.3767 9.90476H4.62327C3.53542 9.90252 2.10763 10.4094 1.62173 11.4286L0.120958 14.4762C-0.0279932 14.7857 -0.0521921 14.9427 0.120958 15.2381C0.294108 15.5335 0.540345 15.999 0.871343 16H15.1287C15.4597 15.999 15.7059 15.5335 15.879 15.2381C16.0522 14.9427 16.028 14.7857 15.879 14.4762Z"                        fill="#202020" />                </svg>                <div class="user-info">                    <p class="user-email">UserName@mail.ru</p>                    <p class="user-info__btn logout-btn">Выйти</p>                    <p class="user-info__btn change-password-btn">Изменить пароль</p>                </div>            </button>            <nav class="header__nav">                <ul class="header__nav-list">                    <li class="header__nav-item ">                        <a href="index.html" class="header__nav-link active">Отгрузка</a>                    </li>                    <li class="header__nav-item">                        <a href="requests.html" class="header__nav-link">Заявки</a>                    </li>                    <li class="header__nav-item">                        <a href="statistic.html" class="header__nav-link">Статистика</a>                    </li>                </ul>            </nav>            <div class="burger">                <span></span>            </div>        </div>    </div></header>    <main>        <section class="main">    <div class="container">        <div class="top-container">            <div class="booking-info">                <p class="selected-date">5 августа, 2024, понедельник</p>                <button class="create-order">                    <span class="create-order__text">Заявка</span>                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">                        <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="white" />                        <path                            d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"                            fill="#1D4ECC" />                    </svg>                </button>            </div>            <div class="calendar-controls">                <button class="calendar-btn primary-btn">Календарь</button>                <div class="date-changer">                    <button class="date-changer__btn date-prev">                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">                            <path d="M6 9L2 5L6 1" stroke="#202020" stroke-width="2" stroke-linecap="round" />                        </svg>                    </button>                    <button class="date-changer__btn date-next">                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">                            <path d="M1 1L5 5L1 9" stroke="#202020" stroke-width="2" stroke-linecap="round" />                        </svg>                    </button>                </div>            </div>        </div>        <div class="daily-orders-container">            <div class="daily-order ">                <p class="daily-order__date">                    ПН, 5                </p>                <p class="daily-order__order-count">x2</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span                                    class="order-item__info-text order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span                                    class="order-item__info-text order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№2</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    Ср, 7                </p>                <p class="daily-order__order-count">x4</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№2</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№3</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№4</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    вт, 6                </p>                <p class="daily-order__order-count">x3</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№2</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№3</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    чт, 8                </p>                <p class="daily-order__order-count">x0</p>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    пт, 9                </p>                <p class="daily-order__order-count">x1</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    сб, 10                </p>                <p class="daily-order__order-count">x2</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№2</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>            <div class="daily-order ">                <p class="daily-order__date">                    вс, 11                </p>                <p class="daily-order__order-count">x10</p>                <div class="order-item-container">                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№1</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№2</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№3</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№4</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№5</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№6</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№7</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№8</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№9</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                    <div class="daily-order__order-item order-item">                        <p class="order-item__number">№10</p>                        <div class="order-item__info">                            <div class="order-item__date-container order-item__info-container">                                <span>Время</span>                                <span class="order-item__info-text order-item__info-text">12:00</span>                            </div>                            <div class="order-item__weight-container order-item__info-container">                                <span>Вес (кг)</span>                                <span class="order-item__info-text order-item__info-text">1000</span>                            </div>                        </div>                    </div>                </div>            </div>        </div>    </div></section>        <section class="active-orders">    <div class="container">        <div class="active-orders__container">            <div class="active-order__item active-order">                <p class="active-order__title">                    Заявка №1 от 03.08.2024                </p>                <p class="active-order__production">                    АБС Крупнозернистая Пористая Марка -2                </p>                <div>                    <span class="active-order__quarry">Зверосовхоз</span>                    <span class="active-order__price">31123 ₽</span>                </div>                <div class="progress">                    <div class="progress__percent">                        <svg>                            <circle cx="70" cy="70" r="70"></circle>                            <circle cx="70" cy="70" r="70"></circle>                        </svg>                        <div class="progress__num">                            <p class="progress-value">46<span>%</span></p>                        </div>                    </div>                </div>                <p class="active-order__result">                    Осталось выполнить: <span>10 т</span>                </p>            </div>            <div class="active-order__item active-order">                <p class="active-order__title">                    Заявка №1 от 03.08.2024                </p>                <p class="active-order__production">                    АБС Крупнозернистая Пористая Марка -2                </p>                <div>                    <span class="active-order__quarry">Зверосовхоз</span>                    <span class="active-order__price">31123 ₽</span>                </div>                <div class="progress">                    <div class="progress__percent">                        <svg>                            <circle cx="70" cy="70" r="70"></circle>                            <circle cx="70" cy="70" r="70"></circle>                        </svg>                        <div class="progress__num">                            <p class="progress-value">101<span>%</span></p>                        </div>                    </div>                </div>                <p class="active-order__result">                    Перевыполение на <span>1 т</span>                </p>            </div>        </div>    </div></section>    </main>    <div class="calendar-wrapper">    <div class="calendar">        <div class="calendar-header">            <span class="month-picker" id="month-picker">February</span>            <div class="year-picker">                <span class="year-change" id="prev-year">                    <pre><</pre>                </span>                <span id="year">2021</span>                <span class="year-change" id="next-year">                    <pre>></pre>                </span>            </div>        </div>        <div class="calendar-body">            <div class="calendar-week-day">                <div>Пн</div>                <div>Вт</div>                <div>Ср</div>                <div>Чт</div>                <div>Пт</div>                <div>Сб</div>                <div>Вс</div>            </div>            <div class="calendar-days"></div>        </div>        <div class="month-list"></div>    </div></div>    <div class="window-wrapper create-order-window-wrapper">    <div class="create-order-window order-window">        <p class="order-window__title">Добавление заявок</p>        <div class="order-window__info-container">            <div class="order-window__order-info">                <div class="order-window__dropdown">                    <div class="order-window__select">                        <span class="order-window__selected">Вид продукции</span>                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"                            xmlns="http://www.w3.org/2000/svg">                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"                                stroke-linecap="round" />                        </svg>                    </div>                    <ul class="order-window__dropdown-menu order-window__dropdown-menu--large">                        <li class="active">АБС Крупнозернистая Плотная, Тип А</li>                        <li>АБС Мелкозернистая Плотная ТИП А-1</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                    </ul>                </div>                <div class="order-window__dropdown">                    <div class="order-window__select">                        <span class="order-window__selected">Карьер</span>                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"                            xmlns="http://www.w3.org/2000/svg">                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"                                stroke-linecap="round" />                        </svg>                    </div>                    <ul class="order-window__dropdown-menu">                        <li class="active">Зверосовхоз</li>                        <li>Карьер 49</li>                        <li>Хутоявр-2</li>                    </ul>                </div>                <div class="order-window__time-container">                    <span class="order-window__time-text">Время</span>                    <div class="order-window__clock-container">                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowHour" />                        <pre>:</pre>                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowMinute" />                    </div>                </div>                <input class="order-window__input" type="text" name="orderNumber" placeholder="Номер заявки" />                <input class="order-window__input" type="text" name="orderWeight" placeholder="Вес (т)" />                <input class="order-window__input" type="text" name="orderWeight" placeholder="Цена ₽/т" />                <input class="order-window__input" type="text" name="orderCarNumber" placeholder="Номер авто" />                <button class="order-window__add-field">                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">                        <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="#E9ECF4" />                        <path                            d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"                            fill="#202020" />                    </svg>                </button>            </div>        </div>        <div class="order-window__footer">            <button class="order-window__create-order create-order">                <span class="create-order__text">Заявка</span>                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">                    <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="white" />                    <path d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"                        fill="#1D4ECC" />                </svg>            </button>            <div class="order-window__actions">                <button class="order-window__btn primary-btn" onclick="closeCreateOrderWindow()">Отменить</button>                <button class="order-window__btn primary-btn primary-btn--blue">Cохранить</button>            </div>        </div>    </div></div>    <div class="window-wrapper order-info-window-wrapper">    <div class="order-info-window order-window">        <div class="order-info__left-block">            <p class="order-window__title">Заявка <span id="order-info__num">№1</span> от 05.08.2024</p>            <div class="order-window__info-container">                <div class="order-window__order-info">                    <div class="order-window__dropdown">                        <div class="order-window__select order-info__select">                            <span class="order-window__selected order-info__selected">АБС Крупнозернистая Плотная,                                Тип                                А</span>                        </div>                    </div>                    <div class="order-window__dropdown">                        <div class="order-window__select">                            <span class="order-window__selected">Зверосовхоз</span>                        </div>                        <ul class="order-window__dropdown-menu">                            <li class="active">Зверосовхоз</li>                            <li>Карьер 49</li>                            <li>Хутоявр-2</li>                        </ul>                    </div>                    <div class="order-window__time-container">                        <span class="order-window__time-text">Время</span>                        <div class="order-window__clock-container">                            <input value="00" disabled class="order-window__clock" id="orderWindowHour" />                            <pre>:</pre>                            <input value="00" disabled class="order-window__clock" id="orderWindowMinute" />                        </div>                    </div>                    <input class="order-window__input" value="Заявка №1" disabled />                    <input class="order-window__input" value="1000 кг" disabled />                    <input class="order-window__input" value="20000 ₽/т" disabled />                    <input class="order-window__input" value="Авто 123" disabled />                </div>            </div>            <div class="order-window__footer">                <div class="order-window__actions">                    <button class="order-window__btn primary-btn" onclick="openEditOrderWindow()">Редактировать</button>                    <button class="order-window__btn primary-btn primary-btn--blue" onclick="closeWindow('order-info-window-wrapper')">Закрыть</button>                </div>            </div>        </div>        <!-- <div class="order-info__right-block">            <div class="ship-out">                <div class="ship-out__item ship-out__total-kg"></div>                <div class="ship-out__item ship-out__shipped-kg"></div>            </div>            <p class="ship-out__text-info">                Отгружено 800 кг из 1000 кг            </p>        </div> -->    </div></div>    <div class="window-wrapper edit-order-window-wrapper">    <div class="edit-order-window order-window">        <p class="order-window__title">Редактирование заявки</p>        <div class="order-window__info-container">            <div class="order-window__order-info">                <div class="order-window__dropdown">                    <div class="order-window__select edit-window__select">                        <span class="order-window__selected edit-window__selected">АБС Крупнозернистая Плотная, Тип А</span>                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"                            xmlns="http://www.w3.org/2000/svg">                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"                                stroke-linecap="round" />                        </svg>                    </div>                    <ul class="order-window__dropdown-menu order-window__dropdown-menu--large">                        <li class="active">АБС Крупнозернистая Плотная, Тип А</li>                        <li>АБС Мелкозернистая Плотная ТИП А-1</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                        <li>Другое...</li>                    </ul>                </div>                <div class="order-window__dropdown">                    <div class="order-window__select">                        <span class="order-window__selected">Зверосовхоз</span>                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"                            xmlns="http://www.w3.org/2000/svg">                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"                                stroke-linecap="round" />                        </svg>                    </div>                    <ul class="order-window__dropdown-menu">                        <li class="active">Зверосовхоз</li>                        <li>Карьер 49</li>                        <li>Хутоявр-2</li>                    </ul>                </div>                <div class="order-window__time-container">                    <span class="order-window__time-text">Время</span>                    <div class="order-window__clock-container">                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowHour" />                        <pre>:</pre>                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowMinute" />                    </div>                </div>                <input class="order-window__input" type="text" name="orderNumber" placeholder="Заявка №1" />                <input class="order-window__input" type="text" name="orderWeight" placeholder="1000 кг" />                <input class="order-window__input" type="text" name="orderPriceWeight" placeholder="20000 ₽/т" />                <input class="order-window__input" type="text" name="orderCarNumber" placeholder="Авто 123" />            </div>        </div>        <div class="order-window__footer">            <div class="order-window__actions">                <button class="order-window__btn primary-btn" onclick="closeEditOrderWindow()">Отменить</button>                <button class="order-window__btn primary-btn primary-btn--blue">Cохранить</button>            </div>        </div>    </div></div>    <script src="js/wow.min.js"></script>    <script>        new WOW().init();    </script>    <script src="../js/main.min.js"></script>    <script src="../js/calendar.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отгрузки</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <button class="user-profile">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.87288 3.80952C3.87288 1.60038 5.51508 0 7.62481 0C9.73454 0 12.1271 1.60038 12.1271 3.80952C12.1271 6.01866 9.73454 8.38095 7.62481 8.38095C6.61168 8.38095 6.09004 7.60729 5.37365 6.85714C4.65726 6.107 3.87288 4.87039 3.87288 3.80952ZM15.879 14.4762L14.3783 11.4286C13.8924 10.4094 12.4646 9.90252 11.3767 9.90476H4.62327C3.53542 9.90252 2.10763 10.4094 1.62173 11.4286L0.120958 14.4762C-0.0279932 14.7857 -0.0521921 14.9427 0.120958 15.2381C0.294108 15.5335 0.540345 15.999 0.871343 16H15.1287C15.4597 15.999 15.7059 15.5335 15.879 15.2381C16.0522 14.9427 16.028 14.7857 15.879 14.4762Z"
+                        fill="#202020" />
+                </svg>
+                <div class="user-info">
+                    <p class="user-email">UserName@mail.ru</p>
+                    <p class="user-info__btn logout-btn">Выйти</p>
+                    <p class="user-info__btn change-password-btn">Изменить пароль</p>
+                </div>
+            </button>
+
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item ">
+                        <a href="index.html" class="header__nav-link active">Отгрузка</a>
+                    </li>
+
+                    <li class="header__nav-item">
+                        <a href="requests.html" class="header__nav-link">Заявки</a>
+                    </li>
+
+                    <li class="header__nav-item">
+                        <a href="statistic.html" class="header__nav-link">Статистика</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</header>
+    <main>
+        <section class="main">
+    <div class="container">
+        <div class="top-container">
+            <div class="booking-info">
+                <p class="selected-date">5 августа, 2024, понедельник</p>
+                <button class="create-order">
+                    <span class="create-order__text">Заявка</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="white" />
+                        <path
+                            d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"
+                            fill="#1D4ECC" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="calendar-controls">
+                <button class="calendar-btn primary-btn">Календарь</button>
+                <div class="date-changer">
+                    <button class="date-changer__btn date-prev">
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L2 5L6 1" stroke="#202020" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <button class="date-changer__btn date-next">
+                        <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L1 9" stroke="#202020" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="daily-orders-container">
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    ПН, 5
+                </p>
+                <p class="daily-order__order-count">x2</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span
+                                    class="order-item__info-text order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span
+                                    class="order-item__info-text order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№2</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    Ср, 7
+                </p>
+                <p class="daily-order__order-count">x4</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№2</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№3</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№4</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    вт, 6
+                </p>
+                <p class="daily-order__order-count">x3</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№2</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№3</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    чт, 8
+                </p>
+                <p class="daily-order__order-count">x0</p>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    пт, 9
+                </p>
+                <p class="daily-order__order-count">x1</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    сб, 10
+                </p>
+                <p class="daily-order__order-count">x2</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№2</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-order ">
+                <p class="daily-order__date">
+                    вс, 11
+                </p>
+                <p class="daily-order__order-count">x10</p>
+                <div class="order-item-container">
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№1</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№2</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№3</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№4</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№5</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№6</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№7</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№8</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№9</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="daily-order__order-item order-item">
+                        <p class="order-item__number">№10</p>
+                        <div class="order-item__info">
+                            <div class="order-item__date-container order-item__info-container">
+                                <span>Время</span>
+                                <span class="order-item__info-text order-item__info-text">12:00</span>
+                            </div>
+                            <div class="order-item__weight-container order-item__info-container">
+                                <span>Вес (кг)</span>
+                                <span class="order-item__info-text order-item__info-text">1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="active-orders">
+    <div class="container">
+
+        <div class="active-orders__container">
+            <div class="active-order__item active-order">
+                <p class="active-order__title">
+                    Заявка №1 от 03.08.2024
+                </p>
+                <p class="active-order__production">
+                    АБС Крупнозернистая Пористая Марка -2
+                </p>
+                <div>
+                    <span class="active-order__quarry">Зверосовхоз</span>
+                    <span class="active-order__price">31123 ₽</span>
+                </div>
+                <div class="progress">
+                    <div class="progress__percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="progress__num">
+                            <p class="progress-value">46<span>%</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="active-order__result">
+                    Осталось выполнить: <span>10 т</span>
+                </p>
+            </div>
+            <div class="active-order__item active-order">
+                <p class="active-order__title">
+                    Заявка №1 от 03.08.2024
+                </p>
+                <p class="active-order__production">
+                    АБС Крупнозернистая Пористая Марка -2
+                </p>
+                <div>
+                    <span class="active-order__quarry">Зверосовхоз</span>
+                    <span class="active-order__price">31123 ₽</span>
+                </div>
+                <div class="progress">
+                    <div class="progress__percent">
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="progress__num">
+                            <p class="progress-value">101<span>%</span></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="active-order__result">
+                    Перевыполение на <span>1 т</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <div class="calendar-wrapper">
+    <div class="calendar">
+        <div class="calendar-header">
+            <span class="month-picker" id="month-picker">February</span>
+            <div class="year-picker">
+                <span class="year-change" id="prev-year">
+                    <pre><</pre>
+                </span>
+                <span id="year">2021</span>
+                <span class="year-change" id="next-year">
+                    <pre>></pre>
+                </span>
+            </div>
+        </div>
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Пн</div>
+                <div>Вт</div>
+                <div>Ср</div>
+                <div>Чт</div>
+                <div>Пт</div>
+                <div>Сб</div>
+                <div>Вс</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+
+        <div class="month-list"></div>
+    </div>
+</div>
+    <div class="window-wrapper create-order-window-wrapper">
+    <div class="create-order-window order-window">
+        <p class="order-window__title">Добавление заявок</p>
+        <div class="order-window__info-container">
+
+            <div class="order-window__order-info">
+                <div class="order-window__dropdown">
+                    <div class="order-window__select">
+                        <span class="order-window__selected">Вид продукции</span>
+                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <ul class="order-window__dropdown-menu order-window__dropdown-menu--large">
+                        <li class="active">АБС Крупнозернистая Плотная, Тип А</li>
+                        <li>АБС Мелкозернистая Плотная ТИП А-1</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                    </ul>
+                </div>
+                <div class="order-window__dropdown">
+                    <div class="order-window__select">
+                        <span class="order-window__selected">Карьер</span>
+                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <ul class="order-window__dropdown-menu">
+                        <li class="active">Зверосовхоз</li>
+                        <li>Карьер 49</li>
+                        <li>Хутоявр-2</li>
+                    </ul>
+                </div>
+                <div class="order-window__time-container">
+                    <span class="order-window__time-text">Время</span>
+                    <div class="order-window__clock-container">
+                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowHour" />
+                        <pre>:</pre>
+                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowMinute" />
+                    </div>
+                </div>
+                <input class="order-window__input" type="text" name="orderNumber" placeholder="Номер заявки" />
+                <input class="order-window__input" type="text" name="orderWeight" placeholder="Вес (т)" />
+                <input class="order-window__input" type="text" name="orderWeight" placeholder="Цена ₽/т" />
+                <input class="order-window__input" type="text" name="orderCarNumber" placeholder="Номер авто" />
+                <button class="order-window__add-field">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="#E9ECF4" />
+                        <path
+                            d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"
+                            fill="#202020" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="order-window__footer">
+            <button class="order-window__create-order create-order">
+                <span class="create-order__text">Заявка</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="10" transform="matrix(-1 0 0 1 20 0)" fill="white" />
+                    <path d="M13.75 9.375H10.625V6.25H9.375V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375Z"
+                        fill="#1D4ECC" />
+                </svg>
+            </button>
+
+            <div class="order-window__actions">
+                <button class="order-window__btn primary-btn" onclick="closeCreateOrderWindow()">Отменить</button>
+                <button class="order-window__btn primary-btn primary-btn--blue">Cохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="window-wrapper order-info-window-wrapper">
+    <div class="order-info-window order-window">
+        <div class="order-info__left-block">
+
+            <p class="order-window__title">Заявка <span id="order-info__num">№1</span> от 05.08.2024</p>
+            <div class="order-window__info-container">
+
+                <div class="order-window__order-info">
+                    <div class="order-window__dropdown">
+                        <div class="order-window__select order-info__select">
+                            <span class="order-window__selected order-info__selected">АБС Крупнозернистая Плотная,
+                                Тип
+                                А</span>
+                        </div>
+                    </div>
+                    <div class="order-window__dropdown">
+                        <div class="order-window__select">
+                            <span class="order-window__selected">Зверосовхоз</span>
+                        </div>
+                        <ul class="order-window__dropdown-menu">
+                            <li class="active">Зверосовхоз</li>
+                            <li>Карьер 49</li>
+                            <li>Хутоявр-2</li>
+                        </ul>
+                    </div>
+                    <div class="order-window__time-container">
+                        <span class="order-window__time-text">Время</span>
+                        <div class="order-window__clock-container">
+                            <input value="00" disabled class="order-window__clock" id="orderWindowHour" />
+                            <pre>:</pre>
+                            <input value="00" disabled class="order-window__clock" id="orderWindowMinute" />
+                        </div>
+                    </div>
+                    <input class="order-window__input" value="Заявка №1" disabled />
+                    <input class="order-window__input" value="1000 кг" disabled />
+                    <input class="order-window__input" value="20000 ₽/т" disabled />
+                    <input class="order-window__input" value="Авто 123" disabled />
+                </div>
+            </div>
+            <div class="order-window__footer">
+                <div class="order-window__actions">
+                    <button class="order-window__btn primary-btn" onclick="openEditOrderWindow()">Редактировать</button>
+                    <button class="order-window__btn primary-btn primary-btn--blue" onclick="closeWindow('order-info-window-wrapper')">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="order-info__right-block">
+            <div class="ship-out">
+                <div class="ship-out__item ship-out__total-kg"></div>
+                <div class="ship-out__item ship-out__shipped-kg"></div>
+            </div>
+            <p class="ship-out__text-info">
+                Отгружено 800 кг из 1000 кг
+            </p>
+        </div> -->
+    </div>
+</div>
+    <div class="window-wrapper edit-order-window-wrapper">
+    <div class="edit-order-window order-window">
+        <p class="order-window__title">Редактирование заявки</p>
+        <div class="order-window__info-container">
+
+            <div class="order-window__order-info">
+                <div class="order-window__dropdown">
+                    <div class="order-window__select edit-window__select">
+                        <span class="order-window__selected edit-window__selected">АБС Крупнозернистая Плотная, Тип А</span>
+                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <ul class="order-window__dropdown-menu order-window__dropdown-menu--large">
+                        <li class="active">АБС Крупнозернистая Плотная, Тип А</li>
+                        <li>АБС Мелкозернистая Плотная ТИП А-1</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>АБС Мелкозернистая Плотная ТИП Б-2</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                        <li>Другое...</li>
+                    </ul>
+                </div>
+                <div class="order-window__dropdown">
+                    <div class="order-window__select">
+                        <span class="order-window__selected">Зверосовхоз</span>
+                        <svg class="order-window__caret" width="11" height="7" viewBox="0 0 11 7" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.9" d="M9.14038 1L5.14038 5L1.14038 1" stroke="#202020" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <ul class="order-window__dropdown-menu">
+                        <li class="active">Зверосовхоз</li>
+                        <li>Карьер 49</li>
+                        <li>Хутоявр-2</li>
+                    </ul>
+                </div>
+                <div class="order-window__time-container">
+                    <span class="order-window__time-text">Время</span>
+                    <div class="order-window__clock-container">
+                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowHour" />
+                        <pre>:</pre>
+                        <input placeholder="00" type="text" class="order-window__clock" id="orderWindowMinute" />
+                    </div>
+                </div>
+                <input class="order-window__input" type="text" name="orderNumber" placeholder="Заявка №1" />
+                <input class="order-window__input" type="text" name="orderWeight" placeholder="1000 кг" />
+                <input class="order-window__input" type="text" name="orderPriceWeight" placeholder="20000 ₽/т" />
+                <input class="order-window__input" type="text" name="orderCarNumber" placeholder="Авто 123" />
+            </div>
+        </div>
+        <div class="order-window__footer">
+            <div class="order-window__actions">
+                <button class="order-window__btn primary-btn" onclick="closeEditOrderWindow()">Отменить</button>
+                <button class="order-window__btn primary-btn primary-btn--blue">Cохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/main.min.js"></script>
+    <script src="js/calendar.js"></script>
+
+</body>
+
+</html>
